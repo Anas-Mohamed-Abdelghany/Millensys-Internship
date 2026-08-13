@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap');
+
+body {
+  background: linear-gradient(135deg, #e0e7ff 0%, #f0f4ff 100%);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+.navbar {
+  backdrop-filter: blur(8px);
+}
+
+.card {
+  border-radius: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08) !important;
+}
+
+.card-header {
+  border-radius: 16px 16px 0 0 !important;
+  font-size: 1.1rem;
+  letter-spacing: 0.3px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #4f6ef7;
+  box-shadow: 0 0 0 0.25rem rgba(79, 110, 247, 0.15);
+}
+
+.table th {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.table tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+.btn {
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: #4f6ef7;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #3b5ae0;
+  transform: scale(1.02);
+}
+
+.btn-warning {
+  background: #fbbf24;
+  border: none;
+  color: #1e293b;
+}
+
+.btn-warning:hover {
+  background: #f59e0b;
+  color: #1e293b;
+  transform: scale(1.02);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-danger:hover {
+  transform: scale(1.08);
+}
+
+.bi {
+  font-size: 1rem;
+}
+
+.table-primary {
+  --bs-table-bg: #eef2ff;
+}
+
+@media (max-width: 768px) {
+  .card {
+    border-radius: 12px;
+  }
+}
