@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "Hash": "RNWlzrugXVAuUh4y2Lg9j8Z0DQccI3pyKfyVQEOVhj8=",
+  "Source": "HospitalAPI",
+  "BasePath": "_content/HospitalAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "HospitalAPI\\wwwroot",
+      "Source": "HospitalAPI",
+      "ContentRoot": "P:\\Courses\\Millensys\\HospitalAPI\\wwwroot\\",
+      "BasePath": "_content/HospitalAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "P:\\Courses\\Millensys\\HospitalAPI\\wwwroot\\index.html",
+      "SourceId": "HospitalAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "P:\\Courses\\Millensys\\HospitalAPI\\wwwroot\\",
+      "BasePath": "_content/HospitalAPI",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "P:\\Courses\\Millensys\\HospitalAPI\\wwwroot\\script.js",
+      "SourceId": "HospitalAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "P:\\Courses\\Millensys\\HospitalAPI\\wwwroot\\",
+      "BasePath": "_content/HospitalAPI",
+      "RelativePath": "script.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\script.js"
+    },
+    {
+      "Identity": "P:\\Courses\\Millensys\\HospitalAPI\\wwwroot\\style.css",
+      "SourceId": "HospitalAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "P:\\Courses\\Millensys\\HospitalAPI\\wwwroot\\",
+      "BasePath": "_content/HospitalAPI",
+      "RelativePath": "style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\style.css"
+    }
+  ]
+}
