@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "P:\\Courses\\Millensys\\HospitalAPI\\HospitalAPI.csproj": {}
+    "P:\\Millensys\\HospitalAPI\\HospitalAPI.csproj": {}
   },
   "projects": {
-    "P:\\Courses\\Millensys\\HospitalAPI\\HospitalAPI.csproj": {
+    "P:\\Millensys\\HospitalAPI\\HospitalAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "P:\\Courses\\Millensys\\HospitalAPI\\HospitalAPI.csproj",
+        "projectUniqueName": "P:\\Millensys\\HospitalAPI\\HospitalAPI.csproj",
         "projectName": "HospitalAPI",
-        "projectPath": "P:\\Courses\\Millensys\\HospitalAPI\\HospitalAPI.csproj",
+        "projectPath": "P:\\Millensys\\HospitalAPI\\HospitalAPI.csproj",
         "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "P:\\Courses\\Millensys\\HospitalAPI\\obj\\",
+        "outputPath": "P:\\Millensys\\HospitalAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config"

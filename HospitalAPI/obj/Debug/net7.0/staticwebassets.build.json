@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RNWlzrugXVAuUh4y2Lg9j8Z0DQccI3pyKfyVQEOVhj8=",
+  "Hash": "oilsVKLTgFqk8vKDOrwUnphoRt5gTTdrKUMwzIFXoXM=",
   "Source": "HospitalAPI",
   "BasePath": "_content/HospitalAPI",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "HospitalAPI\\wwwroot",
       "Source": "HospitalAPI",
-      "ContentRoot": "P:\\Courses\\Millensys\\HospitalAPI\\wwwroot\\",
+      "ContentRoot": "P:\\Millensys\\HospitalAPI\\wwwroot\\",
       "BasePath": "_content/HospitalAPI",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "P:\\Courses\\Millensys\\HospitalAPI\\wwwroot\\index.html",
+      "Identity": "P:\\Millensys\\HospitalAPI\\wwwroot\\index.html",
       "SourceId": "HospitalAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "P:\\Courses\\Millensys\\HospitalAPI\\wwwroot\\",
+      "ContentRoot": "P:\\Millensys\\HospitalAPI\\wwwroot\\",
       "BasePath": "_content/HospitalAPI",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "P:\\Courses\\Millensys\\HospitalAPI\\wwwroot\\script.js",
+      "Identity": "P:\\Millensys\\HospitalAPI\\wwwroot\\script.js",
       "SourceId": "HospitalAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "P:\\Courses\\Millensys\\HospitalAPI\\wwwroot\\",
+      "ContentRoot": "P:\\Millensys\\HospitalAPI\\wwwroot\\",
       "BasePath": "_content/HospitalAPI",
       "RelativePath": "script.js",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\script.js"
     },
     {
-      "Identity": "P:\\Courses\\Millensys\\HospitalAPI\\wwwroot\\style.css",
+      "Identity": "P:\\Millensys\\HospitalAPI\\wwwroot\\style.css",
       "SourceId": "HospitalAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "P:\\Courses\\Millensys\\HospitalAPI\\wwwroot\\",
+      "ContentRoot": "P:\\Millensys\\HospitalAPI\\wwwroot\\",
       "BasePath": "_content/HospitalAPI",
       "RelativePath": "style.css",
       "AssetKind": "All",

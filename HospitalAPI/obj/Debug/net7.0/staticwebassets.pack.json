@@ -1,15 +1,15 @@
 {
   "Files": [
     {
-      "Id": "P:\\Courses\\Millensys\\HospitalAPI\\wwwroot\\index.html",
+      "Id": "P:\\Millensys\\HospitalAPI\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "P:\\Courses\\Millensys\\HospitalAPI\\wwwroot\\script.js",
+      "Id": "P:\\Millensys\\HospitalAPI\\wwwroot\\script.js",
       "PackagePath": "staticwebassets\\script.js"
     },
     {
-      "Id": "P:\\Courses\\Millensys\\HospitalAPI\\wwwroot\\style.css",
+      "Id": "P:\\Millensys\\HospitalAPI\\wwwroot\\style.css",
       "PackagePath": "staticwebassets\\style.css"
     },
     {
