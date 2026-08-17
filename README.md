@@ -1,10 +1,12 @@
 <div align="center">
 
-# 🏥 Millensys Healthcare IT — Internship Projects
+# 🏥 Millensys Healthcare Technology — Internship Projects
 
 A collection of projects completed during the **Software Engineering Internship** at **Millensys Healthcare IT Solutions**.
 
 Covering **Web Development**, **Database Design**, **API Development**, and **.NET Backend Engineering**.
+
+![Millensys Logo](logo.png)
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
@@ -28,7 +30,9 @@ Covering **Web Development**, **Database Design**, **API Development**, and **.N
 | 1 | [Personal Portfolio](#1-personal-portfolio) | Responsive intern portfolio website | HTML5, CSS3 |
 | 2 | [Patient Management System](#2-patient-management-system) | Client-side CRUD patient records app | HTML5, CSS3, JavaScript, Bootstrap 5 |
 | 3 | [Hospital Database System](#3-hospital-database-system) | SQL Server schema + .NET console app | SQL Server, C#, .NET |
-| 4 | [Hospital Patient Worklist API](#4-hospital-patient-worklist-api) | Full-stack REST API with frontend | ASP.NET Core 7.0, EF Core, SQLite, Bootstrap 5 |
+| 4 | [HospitalDB](#4-hospitaldb) | SQL Server database with T-SQL views/procs/functions | SQL Server, T-SQL |
+| 5 | [Hospital Appointment System](#5-hospital-appointment-system) | C# OOP console app for appointment management | C#, .NET Console |
+| 6 | [Hospital Patient Worklist API](#6-hospital-patient-worklist-api) | Full-stack REST API with frontend | ASP.NET Core 7.0, EF Core, SQLite, Bootstrap 5 |
 
 ---
 
@@ -208,7 +212,158 @@ dotnet run
 
 ---
 
-## 4. Hospital Patient Worklist API
+## 4. HospitalDB
+
+<div align="center">
+
+![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=flat&logo=microsoftsqlserver&logoColor=white)
+![T-SQL](https://img.shields.io/badge/T--SQL-CC2927?style=flat&logo=microsoftsqlserver&logoColor=white)
+
+</div>
+
+A **comprehensive relational database management system** for tracking medical personnel, patients, medical specializations, and patient diagnostic studies, built using **T-SQL (MS SQL Server)** with full database programmability including **Views**, **Stored Procedures**, and **Functions**.
+
+### Database Architecture
+
+```
+                       ┌──────────────┐
+                       │    Person    │
+                       ├──────────────┤
+                       │ PersonID(PK) │
+                       │ FullName     │
+                       │ Age          │
+                       │ Gender       │
+                       │ Phone        │
+                       └──────┬───────┘
+                              │
+               ┌──────────────┴──────────────┐
+             1 │                             │ 1
+               ▼ *                           ▼ *
+        ┌──────────────┐              ┌──────────────┐
+        │    Doctor    │              │   Patient    │
+        ├──────────────┤              ├──────────────┤
+        │ DoctorID(PK) │              │ PatientID(PK)│
+        │ PersonID(FK) │              │ PersonID(FK) │
+        │Specialization│              │ Disease      │
+        └──────┬───────┘              └──────┬───────┘
+               │ 1                           │ 1
+               │                             │
+               └──────────────┬──────────────┘
+                              │ *
+                       ┌──────▼───────┐
+                       │    Study     │
+                       ├──────────────┤
+                       │ StudyID(PK)  │
+                       │ DoctorID(FK) │
+                       │ PatientID(FK)│
+                       │ StudyDate    │
+                       │ Result       │
+                       └──────────────┘
+```
+
+### SQL Components
+
+| Type | Components |
+|------|------------|
+| **Views** | `PatientInfo`, `DoctorInfo` |
+| **Procedures** | `GetPatientsByDisease`, `AddPatient` |
+| **Functions** | `GetPatientCount`, `GetDoctorSpecialization`, `GetPatientStudies` |
+
+### What I Learned
+
+- Normalized database design with referential integrity
+- SQL Views for data abstraction and simplified reporting
+- Stored Procedures for parameterized business logic
+- Scalar and Table-Valued Functions for reusable calculations
+- Verification test suite for database objects
+
+### How to Run
+
+1. Open **SQL Server Management Studio (SSMS)** or **Azure Data Studio**.
+2. Connect to your local or remote **SQL Server Instance**.
+3. Execute the SQL scripts sequentially in the following exact order:
+
+```bash
+1. 01_CreateDatabase.sql
+2. 02_CreateTables.sql
+3. 03_InsertData.sql
+4. 04_Views.sql
+5. 05_Procedures.sql
+6. 06_Functions.sql
+7. 07_TestQueries.sql
+```
+
+**Directory:** [`4th Task/`](./4th%20Task/)
+
+---
+
+## 5. Hospital Appointment System
+
+<div align="center">
+
+![C#](https://img.shields.io/badge/C%23-239120?style=flat&logo=csharp&logoColor=white)
+![.NET](https://img.shields.io/badge/.NET-512BD4?style=flat&logo=dotnet&logoColor=white)
+
+</div>
+
+An **Object-Oriented C# console application** designed to model and manage medical appointments, diagnostic studies, patients, and doctors using fundamental **Object-Oriented Programming (OOP)** principles.
+
+### Class Relationship Diagram
+
+```
+       ┌───────────────────┐               ┌───────────────────┐
+       │      Patient      │               │      Doctor       │
+       ├───────────────────┤               ├───────────────────┤
+       │ - patientID: int  │               │ - doctorID: int   │
+       │ - name: string    │               │ - name: string    │
+       │ - disease: string │               │ - specialization  │
+       └─────────▲─────────┘               └─────────▲─────────┘
+                 │ 1                                 │ 1
+                 │         ┌───────────┐             │
+                 └─────────┤Appointment├─────────────┘
+                           ├───────────┤
+                           │ - date    │
+                           │ - branch  │
+                           │ - study   │
+                           │ - reason  │
+                           └─────▲─────┘
+                                 │ 1
+                           ┌─────┴─────┐
+                           │   Study   │
+                           ├───────────┤
+                           │ - studyID │
+                           │ - type    │
+                           │ - result  │
+                           └───────────┘
+```
+
+### OOP Concepts Demonstrated
+
+| Concept | Description |
+|---------|-------------|
+| **Encapsulation** | Private backing fields with explicit getter/setter methods |
+| **Aggregation** | `Appointment` class integrates `Patient` and `Doctor` objects |
+| **Separation of Concerns** | Separate `.cs` files for each class entity |
+
+### What I Learned
+
+- C# object-oriented programming (encapsulation, aggregation)
+- Domain object modeling for healthcare entities
+- Console application formatting and structured output
+- Decoupled architecture with modular class organization
+
+### How to Run
+
+```bash
+cd "5th Task"
+dotnet run
+```
+
+**Directory:** [`5th Task/`](./5th%20Task/)
+
+---
+
+## 6. Hospital Patient Worklist API
 
 <div align="center">
 
@@ -357,6 +512,24 @@ Millensys/
 │   ├── wwwroot/
 │   └── Program.cs
 │
+├── 4th Task/                    # HospitalDB (SQL Server T-SQL)
+│   ├── 01_CreateDatabase.sql
+│   ├── 02_CreateTables.sql
+│   ├── 03_InsertData.sql
+│   ├── 04_Views.sql
+│   ├── 05_Procedures.sql
+│   ├── 06_Functions.sql
+│   ├── 07_TestQueries.sql
+│   └── README.md
+│
+├── 5th Task/                    # Hospital Appointment System (C# OOP)
+│   ├── Appointment.cs
+│   ├── Doctor.cs
+│   ├── Main.cs
+│   ├── Patient.cs
+│   ├── Study.cs
+│   └── README.md
+│
 └── README.md                    # This file
 ```
 
@@ -366,8 +539,8 @@ Millensys/
 
 ### Prerequisites
 
-- [.NET 7.0 SDK](https://dotnet.microsoft.com/download/dotnet/7.0) or later (for Projects 3 & 4)
-- [SQL Server](https://www.microsoft.com/en-us/sql-server) (for Project 3)
+- [.NET 7.0 SDK](https://dotnet.microsoft.com/download/dotnet/7.0) or later (for Projects 3, 4, & 6)
+- [SQL Server](https://www.microsoft.com/en-us/sql-server) (for Projects 3 & 5)
 - A modern web browser (for Projects 1 & 2)
 
 ### Quick Start
@@ -387,8 +560,17 @@ start "2nd Task/index.html"
 cd "3rd Task/.Net Task"
 dotnet run
 
-# Project 4 — Run API server
-cd ../../HospitalAPI
+# Project 4 — Run HospitalDB (4th Task)
+cd ../../"4th Task"
+
+# Execute SQL scripts 01-07 in SSMS
+
+# Project 5 — Run Hospital Appointment System (5th Task)
+cd ../"5th Task"
+dotnet run
+
+# Project 6 — Run API server
+cd ../HospitalAPI
 dotnet run
 ```
 
