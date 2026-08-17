@@ -214,8 +214,8 @@ HospitalAPI/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/HospitalAPI.git
-cd HospitalAPI
+git clone https://github.com/Anas-Mohamed-Abdelghany/Millensys-Internship.git
+cd Millensys-Internship
 
 # Restore dependencies
 dotnet restore
